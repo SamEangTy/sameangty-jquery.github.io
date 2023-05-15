@@ -1,0 +1,328 @@
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.menu-bar{
+    background-color: #333;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    position: relative;
+    z-index: 99;
+
+}
+.menu ul {
+    display: flex;
+     
+}
+.menu ul li{
+    position: relative;
+}
+.menu ul li a{
+    display: block;
+    text-decoration: none;
+    padding: 10px 20px;
+    color: white;
+}
+.menu ul li a:hover{
+    /* opacity: 0.9; */
+    color: white;
+}
+/* style sub-menu
+ */
+ .menu ul li ul.sub-menu{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 250px;
+    background-color: #333;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    display: flex;
+    flex-direction: column;
+    display: none;
+ }
+ .menu ul li:hover ul.sub-menu{
+    display: block;
+ }
+ .left-menu  {
+    position: fixed;
+    width: 300px;
+    height: 100%;
+    top: 0;
+    left: -300px;
+    background-color: #000;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    transition: 0.3s;
+    z-index: 999;
+ }
+ .left-menu ul li a{
+    text-decoration: none;
+    display: block;
+    padding: 20px;
+    color: white;
+    border-bottom: 1px solid whitesmoke;
+ }
+ .popup{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: rgba(240, 248, 255, 0.793);
+ }
+ .container-menu-2{
+    margin-top: 10px;
+ }
+.menu-2 ul{
+    list-style-type: none;
+    background-color: #333;
+    
+}
+.menu-2 ul li a{
+    display: block;
+    text-decoration: none;
+    color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+.menu-2 ul li a:hover{
+    background-color: orangered ;
+}
+.menu-2 ul li a i{
+    margin-top: 5px;
+    font-size: 12px;
+}
+.menu-2 ul li ul.sub-menu-2{
+    width: 90%;
+    margin-left: 5%;
+    background-color: green;
+}
+/* slide-bar  */
+.slide-bar{
+    height: 500px;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    
+}
+.box-slide{
+    width: 100%;
+    height: 100%;  
+   
+}
+.box-slide img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    cursor: pointer;
+    
+}
+/* hover .slide-bar */
+.slide-bar:hover .next-slide{
+    background-color: rgba(255, 68, 0, 0.555);
+    color: white;
+    visibility: visible;
+}
+.next-slide{
+    position: absolute;
+    top: 50%;
+    transform: translate(0,-50%);
+    padding: 5px;
+    border-radius: 5px;
+    margin: 10px;
+    visibility: hidden;
+}
+.left-slide{
+    position: absolute;
+    left: 15px;
+    cursor: pointer;
+    
+}
+.right-slide{
+    position: absolute;
+    right: 15px;
+    cursor: pointer;
+} 
+/* countNum */
+.countNum{
+    position: absolute;
+    top: 10px;
+    left: 25px;
+    padding: 5px 15px;
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+}
+.pageination{
+    position: absolute;
+    background-color: black;
+    bottom: 20px;
+    left: 50%;
+    transform: translate(-50%,0);
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+.pageination ul{
+    display: flex;
+    gap: 5px;
+}
+.pageination ul li {
+    padding: 6px;
+    color: #fff;
+    border-radius: 50%;
+    background-color: orange;
+    font-size: 12px;
+    cursor: pointer;
+}
+.pageination ul li:hover{
+    background-color: orangered;
+}
+.pageination ul li.active{
+    background-color: pink;
+}
+/* cover-box-contianer */
+.cover-box-container{
+    margin-top: 10px;
+    display: flex;
+    height: 380px;
+    padding: 2px;
+    
+}
+.cover-box-container .box-container{
+    background-color: #000;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+.cover-box-container .box-container .box{
+    width: 50%;
+    height: 50%;
+    background-color: green;
+}
+.cover-box-container .box-container .box img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    cursor: pointer;
+    
+}
+.cover-box-container .box-container .box img:hover{
+    scale: 1.1;
+}
+/* popip-img */
+.popup-img{
+    position: fixed;
+    /* z-index: 5; */
+    top: 0;
+    width: 100%;
+    margin-top: 50px;
+    height: 680px;
+    display: flex;
+    justify-content: center;
+    visibility: hidden;
+}
+.popup-box{
+    width: 70%;
+    height: 100%;
+    padding: 50px 150px;
+    background-color: rgba(255, 255, 255, 0.959);
+   
+    
+}
+.popup-box img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+/* close photo */
+.close {
+    position: absolute;
+    right: 237px;
+}
+.close:hover{
+    color: red;
+}
+/*  friend list */
+.friend-lis-box{
+    overflow: scroll;
+    position: fixed;
+    bottom: 10px ;
+    right: 10px;
+    width: 250px;
+    height: 400px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    border-radius: 5px;
+}
+.friend-lis-box h1:hover{
+    background-color: red;
+}
+.friend-lis-box h1{
+    font-size: 18px;
+    background-color: #000;
+    padding: 7px;
+    color: white;
+    margin: 0;
+    cursor: pointer;
+}
+.friend-lis-box ul li{
+    height: 50px;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    gap:10px;
+}
+.friend-lis-box ul li img{
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    border-radius: 50%;
+    
+}
+.friend-lis-box ul li:hover{
+    cursor: pointer;
+    background-color: #eee;
+}
+.chat-container{
+   
+    position: fixed;
+    right: 300px;
+    bottom: 10px;
+    display: flex;
+    gap: 10px;
+}
+.chat-box{
+    background-color: white;
+    width: 300px;
+    height: 360px;
+    border-radius: 10px;
+    position: relative;
+}
+.chat-container .header{
+    border-radius: 10px;
+    width: 100%;
+    height: 40px;
+    background-color: #00000054;
+    padding: 10px;
+}
+.chat-container .header span{
+    color: white;
+}
+.header img{
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+    border-radius: 50px;
+}
+.close-btn{
+    position: absolute;
+    padding: 3px;
+}
+.close-btn:hover{
+    background-color: red;
+    cursor: pointer;
+    border-radius: 50%;
+}
